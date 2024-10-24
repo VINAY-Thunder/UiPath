@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome MakeMyTrip",
+  "Type": "Screen",
+  "Id": "MlaVoppfPUa368z-tpTegw",
+  "Reference": "cpwqW-Pm0kmINccL67CahA/MlaVoppfPUa368z-tpTegw",
+  "ParentRef": "cpwqW-Pm0kmINccL67CahA/reVFu-CqLUKLObw9RdaMUA",
+  "Created": "2024-09-19T19:53:23.8807647Z",
+  "Updated": "2024-09-19T19:53:23.8807647Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

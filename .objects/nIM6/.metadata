@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome MakeMyTrip",
+  "Type": "App",
+  "Id": "nIM6CEYKc06EbA89f1OoTQ",
+  "Reference": "cpwqW-Pm0kmINccL67CahA/nIM6CEYKc06EbA89f1OoTQ",
+  "Created": "2024-09-19T19:53:23.7730322Z",
+  "Updated": "2024-09-19T19:53:23.7730322Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
