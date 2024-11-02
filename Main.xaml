@@ -90,25 +90,27 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1104,1139.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1104,1313.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_USER_SOURCE" />
       <Variable x:TypeArguments="x:String" Name="str_USER_DATE" />
       <Variable x:TypeArguments="x:String" Name="str_USER_DESTINATION" />
       <Variable x:TypeArguments="x:String" Name="str_Email" />
+      <Variable x:TypeArguments="x:String" Name="INPUTDATE" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Get the INPUT 'FROM' USER" sap:VirtualizedContainerService.HintSize="449.6,1116" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Get the INPUT 'FROM' USER" sap:VirtualizedContainerService.HintSize="449.6,1290.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;hi iam neww &quot;]" />
       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="FROM You Want To Around The WORLD TODAY" Title="YOUR JOURNEY BEGIN'S">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:String">[str_USER_SOURCE]</OutArgument>
@@ -133,7 +135,7 @@
       </ui:InputDialog>
       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get the INPUT Date' USER" sap:VirtualizedContainerService.HintSize="416,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="Jounery Commencement Date" Title="Enter Date in Format dd/mm/yyyy">
         <ui:InputDialog.Result>
-          <OutArgument x:TypeArguments="x:String">[str_USER_DATE]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[INPUTDATE]</OutArgument>
         </ui:InputDialog.Result>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
