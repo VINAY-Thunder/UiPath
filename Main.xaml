@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="zz" Type="InArgument(x:String)" />
   </x:Members>
@@ -97,6 +97,7 @@
       <Variable x:TypeArguments="x:String" Name="str_USER_DESTINATION" />
       <Variable x:TypeArguments="x:String" Name="str_Email" />
       <Variable x:TypeArguments="x:String" Name="INPUTDATE" />
+      <Variable x:TypeArguments="x:String" Name="DateInput" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -110,7 +111,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;hi iam neww &quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;hi iam neww with updated..!! &quot;]" />
       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="FROM You Want To Around The WORLD TODAY" Title="YOUR JOURNEY BEGIN'S">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:String">[str_USER_SOURCE]</OutArgument>
@@ -133,16 +134,10 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InputDialog>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get the INPUT Date' USER" sap:VirtualizedContainerService.HintSize="416,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="Jounery Commencement Date" Title="Enter Date in Format dd/mm/yyyy">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="416,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_15" IsPassword="False" Label="Enter The Date dd/MM/yyyy" Title="Make My Trip">
         <ui:InputDialog.Result>
-          <OutArgument x:TypeArguments="x:String">[INPUTDATE]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[DateInput]</OutArgument>
         </ui:InputDialog.Result>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
       </ui:InputDialog>
       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="416,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_14" IsPassword="False" Label="Email-ID" Title="Enter the Email ID">
         <ui:InputDialog.Result>
@@ -167,8 +162,8 @@
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="In_Destination">[str_USER_DESTINATION]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_Source">[str_USER_SOURCE]</InArgument>
-          <InArgument x:TypeArguments="s:DateTime" x:Key="in_Date">[Convert.ToDateTime(str_USER_DATE)]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_Email">[str_Email]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_dateinput">[DateInput]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
